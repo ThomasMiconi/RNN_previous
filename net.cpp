@@ -277,9 +277,7 @@ int main(int argc, char* argv[])
                 //dJ = (  -  ETA * meanerrtrace(trialtype) * meanerrtrace(trialtype) * (hebb.array() * (meanerr - meanerrtrace(trialtype)))).transpose().cwiseMin(MAXDW).cwiseMax(-MAXDW);
                 dJ = (  -  ETA * meanerrtrace(trialtype) * (hebb.array() * (meanerr - meanerrtrace(trialtype)))).transpose().cwiseMin(MAXDW).cwiseMax(-MAXDW);
 
-                //J /= G;
                 J +=  dJ;
-                //J *= G;
 
 
             }
